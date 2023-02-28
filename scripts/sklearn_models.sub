@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -J NPT_imputation                      # Job name
+#SBATCH -o /share/kuleshov/richras/npt/data/brr/log_%A_%a.out                  # Name of stdout output log file 
+#SBATCH -e /share/kuleshov/richras/npt/data/brr/log_%A_%a.err                  # Name of stderr output log file
+#SBATCH -t 96:00:00                          # Time limit (hh:mm:ss)
+#SBATCH --ntasks=1
+#SBATCH --partition=kuleshov
+#SBATCH --mem=300000
+#SBATCH --array=0
+
+source /home/rr568/NPT/non-parametric-transformers/scripts/init_env_sklearn.sh
+
+
+echo 'Begin sklearn'
+free -h
+python $USER_PATH/run.py --data_set poker-hand --model_class sklearn-baselines --sklearn_model GP --data_path /share/kuleshov/richras/npt/data/gp --data_force_reload True --exp_descr gp_poker_hand --exp_n_runs 1 --project GaussianProcess --exp_test_perc 0.1 --exp_val_perc 0.2
+# --Kmer_win_size 5 --data_Kmer True
+# python run.py --data_set imputation --model_class sklearn-baselines --sklearn_model GradientBoosting --data_path /share/kuleshov/richras/npt/data/gb_kmer_imputation_test --data_force_reload True --exp_descr gb_kmer_imputation_test --num_win 3 --subWin_size 100 --exp_n_runs 1 --project GradientBoosting --Kmer_win_size 5 --data_Kmer True
+wait
+
+echo 'Submission finished'
+# sample command sbatch --requeue ./scripts/sklearn_models.sub

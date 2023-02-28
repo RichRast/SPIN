@@ -1,0 +1,43 @@
+name: npt
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.8
+  - cudatoolkit=11.3
+  - pytorch=1.10.2
+  - torchvision
+  - pip
+  - pip:
+    - wandb
+    - scikit-learn
+    - scikit-allel==1.3.5
+    - pandas
+    - pycodestyle
+    - dotmap
+    - line-profiler
+    - tqdm
+    - pytorch-lightning
+    - patool
+    - wget
+    - scikit-optimize
+    - xgboost
+    - catboost
+    - transformers
+    - pytorch-tabnet
+    - numba
+    - ogb
+    - memory-profiler
+    - seaborn
+    - tensorboardX
+    - seaborn
+    - fairseq
+    - dotmap
+    - tabnet
+    - lightgbm
+    - jupyterlab
+    - notebook
+    - matplotlib
+    - qhoptim
+    - torchvision
+    - gpytorch

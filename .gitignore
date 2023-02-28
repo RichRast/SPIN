@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+#data 
+data/*
+*.txt
+scikit-learn*
+checkpoints/*
+*.dat
