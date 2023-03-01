@@ -10,9 +10,11 @@
 This repo implements the experiments for UCI and genomics dataset for our paper [Semi-Parametric Inducing Point Networks and Neural Process](https://openreview.net/forum?id=FE99-fDrWd5).
 For experiments with SPIN Neural Processes please see [SPIN Neural Processes repo](https://github.com/yair-schiff/IPNP) 
 
-## Installation
+## Acknowledgements
 
 This repo uses [NPT](https://arxiv.org/pdf/2106.02584.pdf) codebase and framework https://github.com/OATML/non-parametric-transformers  and modifies the NPT architecture to inducing point architecture, which we call SPIN
+
+## Installation
 
 Set up and activate the Python environment by executing
 
