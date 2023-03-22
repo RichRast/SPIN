@@ -65,10 +65,10 @@ The number of inducing points for datapoints (h in the paper) is configured by n
 If you find SPIN useful for your research, please consider citing our paper:
 ```
 @inproceedings{
-rastogi2023semi,
-title={Semi Parametric Inducing Point Networks},
+rastogi2023semiparametric,
+title={Semi-Parametric Inducing Point Networks and Neural Processes},
 author={Richa Rastogi and Yair Schiff and Alon Hacohen and Zhaozhi Li and Ian Lee and Yuntian Deng and Mert R. Sabuncu and Volodymyr Kuleshov},
-booktitle={International Conference on Learning Representations},
+booktitle={The Eleventh International Conference on Learning Representations },
 year={2023},
 url={https://openreview.net/forum?id=FE99-fDrWd5}
 }
